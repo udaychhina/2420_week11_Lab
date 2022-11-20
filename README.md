@@ -11,13 +11,14 @@
 
 Creates and updates backups of specified directories from server-one into the backup-server every friday at 01:00.
 
-### backup-script
+### backup
 
-1. Create a directory in /opt by using sudo mkdir /opt/backup-script
-2. Save backup-script file into /opt/backup-script  
+1. Create a directory in /opt by using sudo mkdir /opt/backup
+2. Save backup file into /opt/backup  
     - **SSH key** should match the SSH key of **your own backup server**. This is to be specified in the script, inside the section with double quotes. 
-    - **Name of the backup server** should also be specified inside the script:
+    - **The user and host** should also be specified inside the `rsync` command:
 Example:
+![backup](./images/backup.png)
 
 ### backup_config
 
@@ -25,7 +26,7 @@ Example:
 2. Specify the directories to backup and the ip of backup-server
     - IP should match the **IP of your own backup server**, and directories should match the path of **directories you wish to backup**
 
-### backup-service.service
+### backup.service
 
 1. Place the file in /etc/systemd/system    
 2. To enable the service, use `systemctl enable backup-service.service` 
@@ -33,7 +34,7 @@ Example:
 4. Verify the service is active with `systemctl status backup-service.service`
 - if successful, systemctl status should look like screenshot below:
 
-### backup-timer.timer
+### backup.timer
 1. Place the file in /etc/systemd/system    
 2. To enable the service, use `systemctl enable backup-timer.timer` 
 3. To start  the service, use `systemctl start backup-timer.timer`
