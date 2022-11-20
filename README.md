@@ -113,6 +113,6 @@ Follow the steps above to make unit files and the script for the message of the 
 
 `weather.timer`: the timer that triggers the service everyday at 5 am.
 
-If the setup was successful, you will the following message when you log back in to the server:
+If the setup was successful, you will see the following message when you log back in to the server:
 
 ![Weather message of the day](/images/weathermotd.png)
