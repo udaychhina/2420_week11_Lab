@@ -108,7 +108,9 @@ Retrieves the weather forecast in Vancouver every day at 05:00
 Follow the steps above to make unit files and the script for the message of the day weather info. There should be three files: 
 
 `weather`: the script that gets the weather info for Vancouver from wttr.in
+
 `weather.service`: the service unit file that starts the `weather` script
+
 `weather.timer`: the timer that triggers the service everyday at 5 am.
 
 If the setup was successful, you will the following message when you log back in to the server:
